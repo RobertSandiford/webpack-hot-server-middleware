@@ -53,7 +53,7 @@ function getFilename(serverStats, outputPath, chunkName) {
     return path.join(
         outputPath,
         Array.isArray(filename)
-            ? filename.find(asset => /\.js$/.test(asset))
+            ? filename.find(asset => /\.(c|m)?js$/.test(asset))
             : filename
     );
 }
